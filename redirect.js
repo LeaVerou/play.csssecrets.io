@@ -48,6 +48,7 @@ xhr({
 			// Redirect
 			var url = 'http://dabblet.com/gist/' + hash;
 			$('section.redirecting > p').innerHTML = 'Redirecting to <a href="' + url + '">' + url + '</a>';
+			location.href = url;
 		}
 		else {
 			document.body.className = 'error not-found';
