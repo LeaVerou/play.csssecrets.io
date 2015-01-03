@@ -7,11 +7,26 @@
 <link rel="stylesheet" href="style.css" />
 
 </head>
-<body>
+<body class="error no-js">
 
-<h1>Redirecting…</h1>
+<header>
+	<h1>CSS Secrets <strong>play!</strong></h1>
+	<p>by Lea Verou</p>
+</header>
 
-<footer></footer>
+<section class="redirecting">
+	<h1>Redirecting…</h1>
+	<p>Please wait. This won’t take long, promise.</p>
+</section>
+
+<section class="error">
+	<h1>Well, this is embarassing :(</h1>
+	<p class="json">JSON file cannot be loaded or parsed. Please <a href="mailto:website@csssecrets.io">let us know</a>!</p>
+	<p class="not-found">This secret cannot be found. If you’re sure you didn’t mistype the URL, <a href="mailto:website@csssecrets.io">let us know</a>!</p>
+	<p class="no-js">JavaScript doesn’t seem to be working. If you’re sure you haven’t disabled it, please <a href="mailto:website@csssecrets.io">let us know</a> because there’s probably an error in our code!</p>
+	<a href="http://dabblet.com/user/csssecrets" class="all">All secrets</a>
+</section>
+
 <script src="redirect.js"></script>
 
 </body>

@@ -1,0 +1,139 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font: 300 100%/1.5 Helvetica Neue, sans-serif;
+	background: #655;
+	color: white;
+	min-height: 100vh;
+}
+
+p {
+	font-family: Baserville, Palatino Linotype, Palatino, Georgia, sans-serif;
+}
+
+header {
+	display: flex;
+	align-self: start;
+	padding: .5em;
+	background: black;
+}
+
+	header h1 {
+		font-size: 100%;
+		font-weight: 100;
+		text-transform: uppercase;
+		letter-spacing: .06em;
+	}
+
+		header h1 strong {
+			color: deeppink;
+		}
+		
+	header p {
+		flex: 1;
+		text-align: right;
+		font-style: italic;
+	}
+
+body > section {
+	display: none;
+	width: -webkit-max-content;
+	width: max-content;
+	margin: auto;
+	text-align: center;
+}
+
+	body > section > h1 {
+		font-weight: 300;
+		font-size: 230%;
+	}
+
+	body > section > p {
+		margin: .6em 0;
+	}
+
+body > section,
+section.error > p {
+	display: none;
+}
+	
+	/* Show appropritate section */
+	.redirecting .redirecting,
+	.error .error,
+	.no-js .no-js,
+	.json .json,
+	.not-found .not-found {
+		display: block;
+	}
+	
+@-webkit-keyframes spin { to { transform: rotate(1turn); } }
+@-webkit-keyframes radius { to { border-radius: 50%; } }
+@-webkit-keyframes color { to { border: 3px solid; color: #fb3; } }
+@keyframes spin { to { transform: rotate(1turn); } }
+@keyframes radius { to { border-radius: 50%; } }
+@keyframes color { to { border: 3px solid; color: #fb3; } }
+	
+section.redirecting:before {
+	content: '';
+	display: block;
+	width: 50px;
+	height: 50px;
+	margin: 0 auto 1em;
+	border: 15px solid;
+	color: #ab4;
+	box-sizing: border-box;
+	-webkit-animation: 1s spin linear infinite, 1.4s radius linear infinite alternate, 1.8s color linear infinite alternate;
+	animation: 1s spin linear infinite, 1.4s radius linear infinite alternate, 1.8s color linear infinite alternate;
+}
+
+section.error h1 {
+	color: #fb3;
+}
+
+section.error:before {
+	content: '!';
+	display: block;
+	width: 1em;
+	margin: 0 auto .3em;
+	border: .2em solid;
+	border-radius: 50%;
+	text-align: center;
+	font-size: 300%;
+	line-height: 1;
+	font-weight: bold;
+	color: #fb3;
+}
+
+a {
+	color: #ab4;	
+}
+
+a:not(:hover) {
+	text-decoration: none;
+}
+
+.all {
+	display: block;
+	width: -webkit-max-content;
+	width: max-content;
+	padding: .2em .5em;
+	border: .15em solid;
+	border-radius: .3em;
+	box-sizing: border-box;
+	margin: 1em auto 0;
+	color: white;
+	font-size: 120%;
+}
+
+.all:hover {
+	background: white;
+	text-decoration: none;
+	border-color: transparent;
+	color: #655;
+	
+}
