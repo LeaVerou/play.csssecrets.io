@@ -47,7 +47,7 @@ xhr({
 		if (hash) {
 			// Redirect
 			var url = 'http://dabblet.com/gist/' + hash;
-			$('section.redirecting > p').innerHTML = 'Redirecting to <a href="' + url + '">' + url + '</a>';
+			$('section.redirecting > p').innerHTML = 'Redirecting to <a href="' + url + '">' + url + '</a>…';
 			location.href = url;
 		}
 		else {
@@ -55,7 +55,7 @@ xhr({
 		}
 	},
 	onerror: function () {
-		document.body.className = 'error json';
+		//document.body.className = 'error json';
 	}
 });
 
