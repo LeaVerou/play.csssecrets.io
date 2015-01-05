@@ -19,6 +19,8 @@ p {
 header {
 	display: flex;
 	align-self: start;
+	width: 100%;
+	box-sizing: border-box;
 	padding: .5em;
 	background: black;
 }
