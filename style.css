@@ -82,7 +82,11 @@ section.error > p {
 }
 @keyframes spin { to { transform: rotate(1turn); } }
 @keyframes radius { to { border-radius: 50%; } }
-@keyframes color { to { border-width: .1em; color: #fb3; } }
+@keyframes width { to { border-width: .1em; } }
+@keyframes color {
+	50% { color: #fb3; }
+	to { color: deeppink; }
+}
 	
 section.redirecting h1 {
 	color: #ab4;
@@ -98,7 +102,7 @@ section.redirecting h1 {
 		color: #ab4;
 		box-sizing: border-box;
 		-webkit-animation: 1s spin linear infinite, .7s radius linear infinite alternate, 1.1s width infinite alternate, 1.7s color linear infinite alternate;
-		animation: 1s spin linear infinite, 1.4s radius linear infinite alternate, 1.8s color linear infinite alternate;
+		animation: 1s spin linear infinite, .7s radius linear infinite alternate, 1.1s width infinite alternate, 1.7s color linear infinite alternate;
 	}
 
 section.error h1 {

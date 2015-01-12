@@ -55,7 +55,7 @@ xhr({
 		}
 	},
 	onerror: function () {
-		document.body.className = 'error json';
+		//document.body.className = 'error json';
 	}
 });
 
