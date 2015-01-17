@@ -46,7 +46,7 @@ xhr({
 		
 		if (hash) {
 			// Redirect
-			var url = 'http://dabblet.com/gist/' + hash;
+			var url = hash.indexOf('http') == 0? hash : 'http://dabblet.com/gist/' + hash;
 			$('section.redirecting > p').innerHTML = 'Redirecting to <a href="' + url + '">' + url + '</a>…';
 			location.href = url;
 		}
